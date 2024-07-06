@@ -30,7 +30,7 @@ void AdjacencyMatrixGraph::addEdge(int u, int v, int w) {
     // Assuming vertices are 0-indexed
     if (u >= 0 && u < numVertices && v >= 0 && v < numVertices) {
         matrix[u][v] = w;
-        // Uncomment the following line if the graph is undirected
+        // if the graph is undirected
         matrix[v][u] = w;
     } else {
         std::cout << "Error: Invalid vertices " << u << " or " << v << std::endl;
@@ -46,8 +46,8 @@ void AdjacencyMatrixGraph::addEdge(int u, int v) {
 void AdjacencyMatrixGraph::removeEdge(int u, int v) {
     if (u >= 0 && u < numVertices && v >= 0 && v < numVertices) {
         matrix[u][v] = 0;
-        // Uncomment the following line if the graph is undirected
-        // matrix[v][u] = 0;
+        // if the graph is undirected
+        matrix[v][u] = 0;
     } else {
         std::cout << "Error: Invalid vertices " << u << " or " << v << std::endl;
     }
