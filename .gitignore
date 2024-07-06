@@ -1,6 +1,9 @@
 # Ignore object files
 *.o
 
+# Ignore executable files
+*.exe
+
 # Ignore the executable
 graph_algorithms
 
