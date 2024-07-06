@@ -1,0 +1,15 @@
+# Ignore object files
+*.o
+
+# Ignore the executable
+graph_algorithms
+
+# Ignore any temporary or backup files
+*~
+*.swp
+
+# Ignore build directory (if any)
+build/
+
+# Ignore Visual Studio Code files
+.vscode/
