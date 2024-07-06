@@ -1,5 +1,5 @@
-#include <iostream>
 #include "graph.hpp"
+#include <iostream>
 
 // Constructor to initialize the graph with n vertices
 AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n) {
