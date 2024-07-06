@@ -1,3 +1,4 @@
+
 // Adjacency Matrix representation of a graph
 class AdjacencyMatrixGraph {
 private:
@@ -25,8 +26,18 @@ public:
 
     // Function to print the graph
     void printMatrix();
+
+    // Getter for the number of vertices
+    int getNumVertices() const;
+
+    // Getter for the adjacency matrix
+    int** getMatrix() const;
 };
 
+// Function to perform DFS starting from vertex v
+void DFS(const AdjacencyMatrixGraph& graph, int startVertex);
+// Function to perform BFS starting from vertex v
+void BFS(const AdjacencyMatrixGraph& graph, int startVertex);
 
 /*
 // Adjacency List representation of a graph

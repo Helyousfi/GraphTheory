@@ -73,3 +73,13 @@ void AdjacencyMatrixGraph::printMatrix() {
         std::cout << std::endl;
     }
 }
+
+// Getter for the number of vertices
+int AdjacencyMatrixGraph::getNumVertices() const {
+    return numVertices;
+}
+
+// Getter for the adjacency matrix
+int** AdjacencyMatrixGraph::getMatrix() const {
+    return matrix;
+}
