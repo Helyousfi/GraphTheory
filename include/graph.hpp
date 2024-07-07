@@ -39,9 +39,6 @@ void DFS(const AdjacencyMatrixGraph& graph, int startVertex);
 // Function to perform BFS starting from vertex v
 void BFS(const AdjacencyMatrixGraph& graph, int startVertex);
 
-
-
-
 /*
 // Adjacency List representation of a graph
 class AdjacencyListGraph {
