@@ -10,15 +10,10 @@ using namespace std;
 const int dn[4] = {-1, +1, 0, 0};
 const int dm[4] = {0, 0, -1, +1};
 
-
-int DungeonProblem(int** matrix,
-                int rows,
-                int columns,
-                pair<int, int> start, 
-                pair<int, int> end)
-{
-    // 
-    int move_count = 1;
+int DungeonProblem(int** matrix, int rows, int columns, pair<int, int> start, pair<int, int> end) {
+    int move_count = 0;
+    int nodes_left_in_layer = 1;
+    int nodes_in_next_layer = 0;
     bool reached_end = false;
 
     // The Queue for BFS 
@@ -26,11 +21,9 @@ int DungeonProblem(int** matrix,
 
     // Create visited matrix
     int** visited = new int*[rows];
-    for(int i=0; i<rows; i++)
-    {
+    for(int i = 0; i < rows; i++) {
         visited[i] = new int[columns];
-        for(int j=0; j < columns; j++)
-        {
+        for(int j = 0; j < columns; j++) {
             visited[i][j] = FALSE;
         }
     }
@@ -39,41 +32,48 @@ int DungeonProblem(int** matrix,
     bfsqueue.push(start);
     visited[start.first][start.second] = TRUE;
 
-    while(bfsqueue.size() > 0)
-    {
+    while(!bfsqueue.empty()) {
         auto current = bfsqueue.front();
         bfsqueue.pop();
 
         int n = current.first;
         int m = current.second;
-        
+
         // If the end is reached, break
-        if(n == end.first && m == end.second)
-        {
+        if(n == end.first && m == end.second) {
             reached_end = true;
             break;
         }
 
         // Explore neighbours
-        for(int i = 0; i < 4; i++)
-        {
-            int nighbour_n = n + dn[i];
-            int nighbour_m = m + dm[i];
-            if(nighbour_n < 0 || nighbour_n > rows ||
-                    nighbour_m < 0 || nighbour_m > columns )
-            {
+        for(int i = 0; i < 4; i++) {
+            int neighbour_n = n + dn[i];
+            int neighbour_m = m + dm[i];
+            if(neighbour_n < 0 || neighbour_n >= rows || neighbour_m < 0 || neighbour_m >= columns) {
                 continue;
             }
-            if(matrix[nighbour_n][nighbour_m] != '#' && matrix[nighbour_n][nighbour_m] != 'E')
-            {
-                bfsqueue.push(make_pair(nighbour_n, nighbour_m));
+            if(matrix[neighbour_n][neighbour_m] != '#' && !visited[neighbour_n][neighbour_m]) {
+                bfsqueue.push(make_pair(neighbour_n, neighbour_m));
+                visited[neighbour_n][neighbour_m] = TRUE;
+                nodes_in_next_layer++;
             }
         }
 
+        nodes_left_in_layer--;
+        if(nodes_left_in_layer == 0) {
+            move_count++;
+            nodes_left_in_layer = nodes_in_next_layer;
+            nodes_in_next_layer = 0;
+        }
     }
 
-    if(reached_end)
-    {
+    // Clean up visited matrix
+    for(int i = 0; i < rows; i++) {
+        delete[] visited[i];
+    }
+    delete[] visited;
+
+    if(reached_end) {
         return move_count;
     }
     return -1;
