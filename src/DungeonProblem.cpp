@@ -18,7 +18,8 @@ int DungeonProblem(int** matrix,
                 pair<int, int> end)
 {
     // 
-    int move_count = 1;
+    int move_count = 0;
+    int nodes_in_next_layer = 1;
     bool reached_end = false;
 
     // The Queue for BFS 
@@ -64,12 +65,17 @@ int DungeonProblem(int** matrix,
             {
                 continue;
             }
+            if(visited[nighbour_n][nighbour_m] == true)
+            {
+                continue;
+            }
             if(matrix[nighbour_n][nighbour_m] != '#' && matrix[nighbour_n][nighbour_m] != 'E')
             {
                 bfsqueue.push(make_pair(nighbour_n, nighbour_m));
+                visited[nighbour_n][nighbour_m] = true;
+                nodes_in_next_layer++;
             }
         }
-
     }
 
     if(reached_end)
