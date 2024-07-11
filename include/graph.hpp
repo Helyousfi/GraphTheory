@@ -1,7 +1,8 @@
+#include "vector"
 
 // Adjacency Matrix representation of a graph
 class AdjacencyMatrixGraph {
-private:
+private: 
     int **matrix;  // 2D array to store the adjacency matrix
     int numVertices;  // Number of vertices in the graph
 
@@ -36,8 +37,13 @@ public:
 
 // Function to perform DFS starting from vertex v
 void DFS(const AdjacencyMatrixGraph& graph, int startVertex);
+void DFSUtil(int v, 
+        const AdjacencyMatrixGraph& graph, 
+        std::vector<bool>& visited,
+        std::vector<int>* visitedNodes = nullptr);
 // Function to perform BFS starting from vertex v
 void BFS(const AdjacencyMatrixGraph& graph, int startVertex);
+int* TopologicalSort(const AdjacencyMatrixGraph& graph);
 
 /*
 // Adjacency List representation of a graph

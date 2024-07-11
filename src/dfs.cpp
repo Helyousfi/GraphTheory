@@ -2,9 +2,18 @@
 #include <iostream>
 #include <vector>
 
-void DFSUtil(int v, const AdjacencyMatrixGraph& graph, std::vector<bool>& visited) {
+/// @brief 
+/// @param v : start vertex
+/// @param graph : all the graph
+/// @param visited : visited nodes
+/// @param visitedNodes : visited nodes (optional)
+void DFSUtil(int v, 
+        const AdjacencyMatrixGraph& graph, 
+        std::vector<bool>& visited,
+        std::vector<int>* visitedNodes) {
     // Mark the current node as visited and print it
     visited[v] = true;
+    visitedNodes->push_back(v);
     std::cout << v << " ";
 
     // Recur for all the vertices adjacent to this vertex
@@ -12,7 +21,7 @@ void DFSUtil(int v, const AdjacencyMatrixGraph& graph, std::vector<bool>& visite
     int numVertices = graph.getNumVertices();
     for (int i = 0; i < numVertices; ++i) {
         if (matrix[v][i] != 0 && !visited[i]) {
-            DFSUtil(i, graph, visited);
+            DFSUtil(i, graph, visited, visitedNodes);
         }
     }
 }

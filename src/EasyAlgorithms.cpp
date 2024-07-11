@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Tree.hpp"
+
 int LeafSum(TreeNode* node)
 {
     if(node->children.size() == 0) // isLeaf
