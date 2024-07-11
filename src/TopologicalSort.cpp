@@ -1,13 +1,14 @@
 #include<iostream>
 #include<vector>
-#include<graph.hpp>
+#include <algorithm>
+#include "graph.hpp"
+#include "graphAlgorithms.hpp"
 
-int* TopologicalSort(const AdjacencyMatrixGraph& graph)
+std::vector<int> TopologicalSort(const AdjacencyMatrixGraph& graph)
 {
     int N = graph.getNumVertices(); // Number of nodes
     std::vector<bool> visited(N, false);    // Initialized with zeros
-    int ordering[N] = {};   // Initialized with zeros
-    int i = N - 1;
+    std::vector<int> ordering(N, 0);   // Initialized with zeros
 
     for(int node=0; node < N; node++)
     {
@@ -19,12 +20,11 @@ int* TopologicalSort(const AdjacencyMatrixGraph& graph)
             {
                 for(int nodeId : visitedNodes)
                 {
-                    ordering[i] = nodeId;
-                    i--;
+                    ordering.push_back(nodeId);
                 }
             }
         }
     }
-
+    std::reverse(ordering.begin(), ordering.end());
     return ordering;
 }

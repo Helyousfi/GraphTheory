@@ -1,3 +1,6 @@
+#ifndef GRAPH_DEFENITION
+#define GRAPH_DEFENITION
+
 #include "vector"
 
 // Adjacency Matrix representation of a graph
@@ -35,16 +38,7 @@ public:
     int** getMatrix() const;
 };
 
-// Function to perform DFS starting from vertex v
-void DFS(const AdjacencyMatrixGraph& graph, int startVertex);
-void DFSUtil(int v, 
-        const AdjacencyMatrixGraph& graph, 
-        std::vector<bool>& visited,
-        std::vector<int>* visitedNodes = nullptr);
-// Function to perform BFS starting from vertex v
-void BFS(const AdjacencyMatrixGraph& graph, int startVertex);
-int* TopologicalSort(const AdjacencyMatrixGraph& graph);
-
+#endif 
 /*
 // Adjacency List representation of a graph
 class AdjacencyListGraph {

@@ -1,4 +1,5 @@
 #include "graph.hpp"
+#include "graphAlgorithms.hpp"
 #include <iostream>
 #include <vector>
 
