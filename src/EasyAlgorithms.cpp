@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Tree.hpp"
+#include "tree.hpp"
 
 int LeafSum(TreeNode* node)
 {
