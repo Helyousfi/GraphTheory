@@ -83,3 +83,8 @@ int AdjacencyMatrixGraph::getNumVertices() const {
 int** AdjacencyMatrixGraph::getMatrix() const {
     return matrix;
 }
+
+// Getter for the neighbor
+int* AdjacencyMatrixGraph::getNeighbor(int vertex) const {
+    return matrix[vertex];
+}
