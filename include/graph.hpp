@@ -40,9 +40,4 @@ public:
     // Getter for the neighbore
     int* getNeighbor(int vertex) const;
 };
-
 #endif 
-/*
-
-
-*/

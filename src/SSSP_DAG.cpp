@@ -7,7 +7,7 @@
 #include "graphAlgorithms.hpp"
 
 
-void shortestPath(AdjacencyMatrixGraph& graph, int source) {
+std::vector<int> shortestPath(AdjacencyMatrixGraph& graph, int source) {
     std::vector<int> sorted = TopologicalSort(graph);
     
     // Number of vertices in the graph
@@ -17,12 +17,8 @@ void shortestPath(AdjacencyMatrixGraph& graph, int source) {
     std::vector<int> distance(V, std::numeric_limits<int>::max());
     distance[source] = 0;
 
-    std::vector<bool> visited(V, false); 
-
     for(int u : sorted)
     {
-        if(visited[u]) continue;
-        visited[u] = true;
         int* neighbors = graph.getMatrix()[u];
         // Update distances of all adjacent vertices
         for (int v = 0; v < V; v++) {
@@ -31,4 +27,5 @@ void shortestPath(AdjacencyMatrixGraph& graph, int source) {
             }
         }
     }
+    return distance;
 }
