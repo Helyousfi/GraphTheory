@@ -3,8 +3,6 @@
 #include <vector>
 #include <queue>
 
-int a;
-
 void BFS(const AdjacencyMatrixGraph& graph, int startVertex) {
     int numVertices = graph.getNumVertices();
     std::vector<bool> visited(numVertices, false);

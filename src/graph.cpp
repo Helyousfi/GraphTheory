@@ -88,3 +88,13 @@ int** AdjacencyMatrixGraph::getMatrix() const {
 int* AdjacencyMatrixGraph::getNeighbor(int vertex) const {
     return matrix[vertex];
 }
+
+// Function to multiply the matrix by -1
+void AdjacencyMatrixGraph::multiplyByMinusOne() {
+    for (int i = 0; i < numVertices; ++i) {
+        for (int j = 0; j < numVertices; ++j) {
+            if (matrix[i][j] != 0) // Only if there is an edge
+                matrix[i][j] = -matrix[i][j];
+        }
+    }
+}

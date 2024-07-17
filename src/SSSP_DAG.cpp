@@ -6,7 +6,10 @@
 #include "graph.hpp"
 #include "graphAlgorithms.hpp"
 
-
+/// @brief Finds shortest path in a DAG
+/// @param graph 
+/// @param source 
+/// @return 
 std::vector<int> shortestPath(AdjacencyMatrixGraph& graph, int source) {
     std::vector<int> sorted = TopologicalSort(graph);
     
@@ -26,6 +29,22 @@ std::vector<int> shortestPath(AdjacencyMatrixGraph& graph, int source) {
                 distance[v] = neighbors[v] + distance[u];
             }
         }
+    }
+    return distance;
+}
+
+/// @brief Longest path finder in a DAG
+/// @param graph 
+/// @param source 
+/// @return 
+std::vector<int> longestPath(AdjacencyMatrixGraph& graph, int source)
+{
+    AdjacencyMatrixGraph invGraph = graph;
+    invGraph.multiplyByMinusOne();
+    std::vector<int> distance = shortestPath(invGraph, source);
+    for (int &d : distance) {
+        if (d != std::numeric_limits<int>::max())
+            d = -d;
     }
     return distance;
 }

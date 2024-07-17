@@ -39,5 +39,8 @@ public:
 
     // Getter for the neighbore
     int* getNeighbor(int vertex) const;
+
+    // Function to multiply the matrix by -1 : useful for SSSP_DAG longest path
+    void multiplyByMinusOne();
 };
 #endif 
