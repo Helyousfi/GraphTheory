@@ -1,5 +1,6 @@
-#include "graph.hpp"
+#include "adjacency_matrix_graph.hpp"
 #include <iostream>
+#include "Graph.hpp"
 
 // Constructor to initialize the graph with n vertices
 AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n) {
@@ -77,6 +78,11 @@ void AdjacencyMatrixGraph::printMatrix() {
 // Getter for the number of vertices
 int AdjacencyMatrixGraph::getNumVertices() const {
     return numVertices;
+}
+
+// Getter for edge weight
+int AdjacencyMatrixGraph::getEdgeWeight(int u, int v) const {
+    return matrix[u][v];
 }
 
 // Getter for the adjacency matrix
