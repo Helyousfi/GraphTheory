@@ -1,4 +1,4 @@
-#include "graph.hpp"
+#include "adjacency_matrix_graph.hpp"
 #include <iostream>
 #include <vector>
 #include <queue>

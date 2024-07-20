@@ -1,5 +1,5 @@
 // Edge List representation of a graph
-class EdgeListGraph {
+class EdgeListGraph : Graph {
 private:
     // Structure to represent an edge in the edge list
     struct Edge {
