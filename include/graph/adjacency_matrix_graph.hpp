@@ -1,8 +1,8 @@
-#ifndef GRAPH_DEFENITION
-#define GRAPH_DEFENITION
+#ifndef ADJACENCY_MATRIX_GRAPH_DEFENITION_H
+#define ADJACENCY_MATRIX_GRAPH_DEFENITION_H
 
 #include "vector"
-
+#include "graph.hpp"
 // Adjacency Matrix representation of a graph
 class AdjacencyMatrixGraph : Graph {
 private: 
@@ -26,7 +26,7 @@ public:
     void removeEdge(int u, int v);
 
     // Function to check if there is an edge from vertex u to vertex v
-    bool hasEdge(int u, int v);
+    bool hasEdge(int u, int v) const;
 
     // Function to print the graph
     void printMatrix();
@@ -39,10 +39,10 @@ public:
     // Getter for the adjacency matrix
     int** getMatrix() const;
 
-    // Getter for the neighbore
-    int* getNeighbor(int vertex) const;
+    // Getter for the neighbor
+    int* getNeighbors(int vertex) const;
 
     // Function to multiply the matrix by -1 : useful for SSSP_DAG longest path
     void multiplyByMinusOne();
 };
-#endif 
+#endif // ADJACENCY_MATRIX_GRAPH_DEFENITION_H

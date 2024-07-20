@@ -1,5 +1,6 @@
+#ifdef EXCLUDE_THIS_FILE
 // Edge List representation of a graph
-class EdgeListGraph : Graph {
+class EdgeListGraph {
 private:
     // Structure to represent an edge in the edge list
     struct Edge {
@@ -27,3 +28,5 @@ public:
     // Function to check if there is an edge from vertex u to vertex v
     bool hasEdge(int u, int v);
 };
+#else
+#endif

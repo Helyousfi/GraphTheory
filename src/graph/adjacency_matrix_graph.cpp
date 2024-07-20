@@ -1,6 +1,6 @@
-#include "adjacency_matrix_graph.hpp"
 #include <iostream>
-#include "Graph.hpp"
+#include "../../include/graph/adjacency_matrix_graph.hpp"
+#include "../../include/graph/graph.hpp"
 
 // Constructor to initialize the graph with n vertices
 AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n) {
@@ -91,7 +91,7 @@ int** AdjacencyMatrixGraph::getMatrix() const {
 }
 
 // Getter for the neighbor
-int* AdjacencyMatrixGraph::getNeighbor(int vertex) const {
+int* AdjacencyMatrixGraph::getNeighbors(int vertex) const {
     return matrix[vertex];
 }
 

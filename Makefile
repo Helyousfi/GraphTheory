@@ -12,7 +12,7 @@ SRCDIR = src
 INCDIR = include
 BUILDDIR = build
 
-# Source files, explicitly excluding SSSP_DAG.cpp and TopologicalSort.cpp
+# Source files, explicitly excluding SSSP_DAG.cpp, dungeonProblem.cpp, and TopologicalSort.cpp
 SRCS = $(filter-out \
 	$(SRCDIR)/easyAlgorithms.cpp \
     $(SRCDIR)/SSSP_DAG.cpp \
@@ -22,6 +22,9 @@ SRCS = $(filter-out \
 
 # Object files based on the updated list of source files
 OBJS = $(patsubst $(SRCDIR)/%.cpp,$(BUILDDIR)/%.o,$(SRCS))
+
+# Recursive wildcard function to get all source files in subdirectories
+rwildcard=$(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2) $(filter $(subst *,%,$2),$d))
 
 # Default rule
 all: $(TARGET)
@@ -33,13 +36,14 @@ $(TARGET): $(OBJS)
 	@echo "Linking complete!"
 
 # Rule to compile source files to object files
-$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp $(INCDIR)/%.hpp
+$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
+	@mkdir -p $(dir $@)  # Ensure the directory for the object file exists
 	$(CXX) $(CXXFLAGS) -c $< -o $@ -I$(INCDIR)
 	@echo "Compiled $<"
 
 # Rule to clean the directory
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -rf $(BUILDDIR) $(TARGET)
 	@echo "Cleaned up!"
 
 # Phony targets

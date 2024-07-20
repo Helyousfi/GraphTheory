@@ -15,11 +15,11 @@ public:
 
     virtual bool hasEdge(int node1, int node2) const = 0;
 
-    virtual std::vector<int> getNeighbors(int node) const = 0;
+    virtual int* getNeighbors(int node) const = 0;
     virtual int getEdgeWeight(int node1, int node2) const = 0;
-
-    virtual int getNodeCount() const = 0;
-    virtual int getEdgeCount() const = 0;
+    virtual int getNumVertices() const;
+    // virtual int getNodeCount() const = 0;
+    // virtual int getEdgeCount() const = 0;
 };
 
 #endif // GRAPH_H

@@ -1,4 +1,5 @@
-#include "traversal_algorithms.hpp"
+#include "../../../include/graph/adjacency_matrix_graph.hpp"
+#include "../../../include/algorithms/traversal/traversal_algorithms.hpp"
 #include <iostream>
 #include <queue>
 #include <stack>

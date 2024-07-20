@@ -1,5 +1,5 @@
 #include <iostream>
-#include "adjacency_matrix_graph.hpp"
+#include "../include/graph/adjacency_matrix_graph.hpp"
 
 int main()
 {
