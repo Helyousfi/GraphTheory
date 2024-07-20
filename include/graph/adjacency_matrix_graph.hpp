@@ -4,7 +4,7 @@
 #include "vector"
 
 // Adjacency Matrix representation of a graph
-class AdjacencyMatrixGraph {
+class AdjacencyMatrixGraph : Graph {
 private: 
     int **matrix;  // 2D array to store the adjacency matrix
     int numVertices;  // Number of vertices in the graph
@@ -33,6 +33,8 @@ public:
 
     // Getter for the number of vertices
     int getNumVertices() const;
+
+    int getEdgeWeight(int node1, int node2) const;
 
     // Getter for the adjacency matrix
     int** getMatrix() const;

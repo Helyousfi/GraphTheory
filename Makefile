@@ -2,7 +2,7 @@
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++11 -Wall -Wextra -D EXCLUDE_THIS_FILE
 
 # Target executable
 TARGET = graph_algorithms
