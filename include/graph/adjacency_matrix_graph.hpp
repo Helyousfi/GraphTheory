@@ -43,7 +43,7 @@ public:
     bool hasEdge(int u, int v) const;
 
     // Function to print the graph
-    void printMatrix();
+    void printMatrix() const;
 
     // Getter for the number of vertices
     int getNumVertices() const;

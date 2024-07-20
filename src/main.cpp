@@ -1,6 +1,7 @@
 #include <iostream>
 #include "../include/graph/graph.hpp"
 #include "../include/graph/adjacency_matrix_graph.hpp"
+#include "../Utils/debug.hpp"
 
 int main()
 {
@@ -12,6 +13,10 @@ int main()
     graph->addEdge(1, 4);
     graph->addEdge(3, 5);
     graph->addEdge(3, 4);
+
+#ifdef DEBUG
+    debugGraph(graph);
+#endif
 
     return 0;
 }

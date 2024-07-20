@@ -64,7 +64,7 @@ bool AdjacencyMatrixGraph::hasEdge(int u, int v) const {
 }
 
 // Function to print the adjacency matrix (for debugging purposes)
-void AdjacencyMatrixGraph::printMatrix() {
+void AdjacencyMatrixGraph::printMatrix() const {
     std::cout << "Adjacency Matrix:" << std::endl;
     for (int i = 0; i < numVertices; ++i) {
         for (int j = 0; j < numVertices; ++j) {
