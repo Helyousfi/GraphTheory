@@ -55,7 +55,7 @@ void AdjacencyMatrixGraph::removeEdge(int u, int v) {
 }
 
 // Function to check if there is an edge from vertex u to vertex v
-bool AdjacencyMatrixGraph::hasEdge(int u, int v) {
+bool AdjacencyMatrixGraph::hasEdge(int u, int v) const {
     if (u >= 0 && u < numVertices && v >= 0 && v < numVertices) {
         return matrix[u][v] != 0;
     } else {

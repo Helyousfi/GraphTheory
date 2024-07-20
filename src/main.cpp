@@ -12,6 +12,5 @@ int main()
     graph->addEdge(3, 5);
     graph->addEdge(3, 4);
 
-
     return 0;
 }

@@ -4,7 +4,7 @@
 #include "vector"
 #include "graph.hpp"
 // Adjacency Matrix representation of a graph
-class AdjacencyMatrixGraph : Graph {
+class AdjacencyMatrixGraph : public Graph {
 private: 
     int **matrix;  // 2D array to store the adjacency matrix
     int numVertices;  // Number of vertices in the graph
