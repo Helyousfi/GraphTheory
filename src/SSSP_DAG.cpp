@@ -1,5 +1,4 @@
 #ifdef EXCLUDE_THIS_FILE
-#else
 // Function to find shortest paths from the source to all vertices
 #include<vector>
 #include<map>
@@ -50,4 +49,5 @@ std::vector<int> longestPath(AdjacencyMatrixGraph& graph, int source)
     }
     return distance;
 }
+#else
 #endif

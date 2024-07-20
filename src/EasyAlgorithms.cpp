@@ -1,3 +1,4 @@
+#ifdef EXCLUDE_THIS_FILE
 #include <iostream>
 #include "tree.hpp"
 
@@ -26,3 +27,5 @@ int TreeHeight(TreeNode* node) {
     }
     return maxChildHeight + 1;
 }
+#else
+#endif

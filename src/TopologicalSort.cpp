@@ -1,3 +1,4 @@
+#ifdef EXCLUDE_THIS_FILE
 #include<iostream>
 #include<vector>
 #include <algorithm>
@@ -28,3 +29,5 @@ std::vector<int> TopologicalSort(const AdjacencyMatrixGraph& graph)
     std::reverse(ordering.begin(), ordering.end());
     return ordering;
 }
+#else
+#endif

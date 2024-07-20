@@ -1,6 +1,5 @@
 #include <iostream>
 #include "adjacency_matrix_graph.hpp"
-#include "vector"
 
 int main()
 {

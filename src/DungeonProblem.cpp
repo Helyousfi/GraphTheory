@@ -1,6 +1,8 @@
+
 /*
     A BFS Algorithm to find shortest path
 */
+#ifdef EXCLUDE_THIS_FILE
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -81,3 +83,5 @@ int DungeonProblem(int** matrix, int rows, int columns, pair<int, int> start, pa
     }
     return -1;
 }
+#else
+#endif

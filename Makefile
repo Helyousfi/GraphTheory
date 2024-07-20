@@ -2,7 +2,7 @@
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -std=c++11 -Wall -Wextra -D EXCLUDE_THIS_FILE
+CXXFLAGS = -std=c++11 -Wall -Wextra
 
 # Target executable
 TARGET = graph_algorithms
@@ -12,10 +12,15 @@ SRCDIR = src
 INCDIR = include
 BUILDDIR = build
 
-# Source files
-SRCS = $(wildcard $(SRCDIR)/*.cpp)
+# Source files, explicitly excluding SSSP_DAG.cpp and TopologicalSort.cpp
+SRCS = $(filter-out \
+	$(SRCDIR)/easyAlgorithms.cpp \
+    $(SRCDIR)/SSSP_DAG.cpp \
+    $(SRCDIR)/dungeonProblem.cpp \
+    $(SRCDIR)/TopologicalSort.cpp, \
+    $(wildcard $(SRCDIR)/*.cpp))
 
-# Object files
+# Object files based on the updated list of source files
 OBJS = $(patsubst $(SRCDIR)/%.cpp,$(BUILDDIR)/%.o,$(SRCS))
 
 # Default rule
@@ -28,7 +33,7 @@ $(TARGET): $(OBJS)
 	@echo "Linking complete!"
 
 # Rule to compile source files to object files
-$(SRCDIR)/%.o: $(SRCDIR)/%.cpp $(INCDIR)/graph.hpp
+$(BUILDDIR)/%.o: $(SRCDIR)/%.cpp $(INCDIR)/%.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@ -I$(INCDIR)
 	@echo "Compiled $<"
 
