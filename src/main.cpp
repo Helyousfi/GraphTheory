@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../include/graph/graph.hpp"
 #include "../include/graph/adjacency_matrix_graph.hpp"
 
 int main()

@@ -1,3 +1,17 @@
+// adjacency_matrix_graph.cpp
+// 
+// Implementation of the AdjacencyMatrixGraph class, which represents a graph using an adjacency matrix.
+// This class provides methods to add, remove, and check edges, as well as to manipulate and query the graph.
+// 
+// The AdjacencyMatrixGraph class includes:
+// - A constructor to initialize the graph with a given number of vertices.
+// - A destructor to properly release dynamically allocated memory.
+// - Methods to add and remove edges, check for edge existence, and print the adjacency matrix.
+// - Additional utility functions such as multiplying the matrix by -1 for specific algorithms.
+//
+// This implementation is part of a graph library designed to offer efficient graph operations and algorithms.
+// Given the performance requirements, this library is implemented in C++ for better speed and efficiency compared to higher-level languages like Python.
+
 #ifndef ADJACENCY_MATRIX_GRAPH_DEFENITION_H
 #define ADJACENCY_MATRIX_GRAPH_DEFENITION_H
 

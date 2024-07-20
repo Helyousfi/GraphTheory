@@ -1,7 +1,7 @@
 #ifndef SHORTEST_PATH_ALGORITHMS_H
 #define SHORTEST_PATH_ALGORITHMS_H
 
-#include "adjacency_matrix_graph.hpp"
+#include "../../graph/adjacency_matrix_graph.hpp"
 #include <vector>
 
 class ShortestPathAlgorithms {

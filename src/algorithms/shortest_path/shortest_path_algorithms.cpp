@@ -92,7 +92,7 @@ std::vector<int> ShortestPathAlgorithms::dijkstra(const AdjacencyMatrixGraph& gr
     // Print the shortest distances from the source to all other vertices
     std::cout << "Vertex\tDistance from Source" << std::endl;
     for (int i = 0; i < V; ++i) {
-        std::cout << i << "\t" << (distance[i] == INT_MAX ? "INF" : std::to_string(distance[i])) << std::endl;
+        // std::cout << i << "\t" << (distance[i] == INT_MAX ? "INF" : std::to_string(distance[i])) << std::endl;
     }
     return distance;
 }

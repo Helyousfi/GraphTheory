@@ -1,7 +1,7 @@
 #ifndef TRAVERSAL_ALGORITHMS_H
 #define TRAVERSAL_ALGORITHMS_H
 
-#include "adjacency_matrix_graph.hpp"
+#include "../../graph/adjacency_matrix_graph.hpp"
 #include <vector>
 
 class TraversalAlgorithms {
