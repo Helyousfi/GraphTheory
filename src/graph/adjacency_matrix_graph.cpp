@@ -3,8 +3,7 @@
 #include "../../include/graph/graph.hpp"
 
 // Constructor to initialize the graph with n vertices
-AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n) {
-    numVertices = n;
+AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n) : numVertices(n) {
     // Initialize the adjacency matrix with all zeros (no edges initially)
     matrix = new int*[n]; // Allocates an array of n pointers to int (rows of the matrix).
     for (int i = 0; i < n; ++i) {
