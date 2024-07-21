@@ -156,7 +156,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="debug.cpp" />
-    <ClCompile Include="graph_plotter.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

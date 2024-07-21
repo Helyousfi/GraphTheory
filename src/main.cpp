@@ -2,7 +2,6 @@
 #include "../include/graph/graph.hpp"
 #include "../include/graph/adjacency_matrix_graph.hpp"
 #include "../GraphLibrary/Utils/debug.hpp"
-#include "../GraphLibrary/Utils/graph_plotter.hpp"
 
 int main()
 {
@@ -19,6 +18,5 @@ int main()
 #ifdef DEBUG
     debugGraph(graph);
 #endif
-    GraphPlotter.plot(graph);
     return 0;
 }
