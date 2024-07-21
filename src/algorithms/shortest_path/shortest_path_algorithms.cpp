@@ -4,6 +4,9 @@
 #include <set>
 #include "../../../include/graph/adjacency_matrix_graph.hpp"
 #include "../../../include/algorithms/shortest_path/shortest_path_algorithms.hpp"
+
+using namespace GraphLibrary;
+
 /**
  * Implements the Bellman-Ford algorithm to find the shortest paths from a source vertex to all other vertices 
  * in a given weighted graph.

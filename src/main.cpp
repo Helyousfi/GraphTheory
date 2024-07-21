@@ -5,7 +5,8 @@
 
 int main()
 {
-    AdjacencyMatrixGraph* graph = new AdjacencyMatrixGraph(6);
+    GraphLibrary::AdjacencyMatrixGraph* graph 
+        = new GraphLibrary::AdjacencyMatrixGraph(6);
     graph->addEdge(0, 1);
     graph->addEdge(1, 2);
     graph->addEdge(2, 3);

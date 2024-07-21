@@ -3,6 +3,7 @@
 
 #include "../../graph/adjacency_matrix_graph.hpp"
 #include <vector>
+using namespace GraphLibrary;
 
 class ShortestPathAlgorithms {
 public:

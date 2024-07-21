@@ -11,52 +11,55 @@
 //
 // This implementation is part of a graph library designed to offer efficient graph operations and algorithms.
 // Given the performance requirements, this library is implemented in C++ for better speed and efficiency compared to higher-level languages like Python.
-
+#pragma once
 #ifndef ADJACENCY_MATRIX_GRAPH_DEFENITION_H
 #define ADJACENCY_MATRIX_GRAPH_DEFENITION_H
 
 #include "vector"
 #include "graph.hpp"
-// Adjacency Matrix representation of a graph
-class AdjacencyMatrixGraph : public Graph {
-private: 
-    int **matrix;  // 2D array to store the adjacency matrix
-    int numVertices;  // Number of vertices in the graph
 
-public:
-    // Constructor to initialize the graph with n vertices
-    AdjacencyMatrixGraph(int n);
+namespace GraphLibrary {
+    // Adjacency Matrix representation of a graph
+    class AdjacencyMatrixGraph : public Graph {
+    private: 
+        int **matrix;  // 2D array to store the adjacency matrix
+        int numVertices;  // Number of vertices in the graph
 
-    // Destructor to free dynamically allocated memory
-    ~AdjacencyMatrixGraph();
+    public:
+        // Constructor to initialize the graph with n vertices
+        AdjacencyMatrixGraph(int n);
 
-    // Function to add an edge from vertex u to vertex v with weight w (for weighted graphs)
-    void addEdge(int u, int v, int w);
+        // Destructor to free dynamically allocated memory
+        ~AdjacencyMatrixGraph();
 
-    // Function to add an edge from vertex u to vertex v (for unweighted graphs)
-    void addEdge(int u, int v);
+        // Function to add an edge from vertex u to vertex v with weight w (for weighted graphs)
+        void addEdge(int u, int v, int w);
 
-    // Function to remove an edge from vertex u to vertex v
-    void removeEdge(int u, int v);
+        // Function to add an edge from vertex u to vertex v (for unweighted graphs)
+        void addEdge(int u, int v);
 
-    // Function to check if there is an edge from vertex u to vertex v
-    bool hasEdge(int u, int v) const;
+        // Function to remove an edge from vertex u to vertex v
+        void removeEdge(int u, int v);
 
-    // Function to print the graph
-    void printMatrix() const;
+        // Function to check if there is an edge from vertex u to vertex v
+        bool hasEdge(int u, int v) const;
 
-    // Getter for the number of vertices
-    int getNumVertices() const;
+        // Function to print the graph
+        void printMatrix() const;
 
-    int getEdgeWeight(int node1, int node2) const;
+        // Getter for the number of vertices
+        int getNumVertices() const;
 
-    // Getter for the adjacency matrix
-    int** getMatrix() const;
+        int getEdgeWeight(int node1, int node2) const;
 
-    // Getter for the neighbor
-    int* getNeighbors(int vertex) const;
+        // Getter for the adjacency matrix
+        int** getMatrix() const;
 
-    // Function to multiply the matrix by -1 : useful for SSSP_DAG longest path
-    void multiplyByMinusOne();
+        // Getter for the neighbor
+        int* getNeighbors(int vertex) const;
+
+        // Function to multiply the matrix by -1 : useful for SSSP_DAG longest path
+        void multiplyByMinusOne();
+    };
 };
 #endif // ADJACENCY_MATRIX_GRAPH_DEFENITION_H

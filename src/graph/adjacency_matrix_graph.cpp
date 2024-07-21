@@ -2,6 +2,7 @@
 #include "../../include/graph/adjacency_matrix_graph.hpp"
 #include "../../include/graph/graph.hpp"
 
+using namespace GraphLibrary;
 // Constructor to initialize the graph with n vertices
 AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n) : numVertices(n) {
     // Initialize the adjacency matrix with all zeros (no edges initially)

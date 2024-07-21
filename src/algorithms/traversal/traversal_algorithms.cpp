@@ -4,6 +4,8 @@
 #include <queue>
 #include <stack>
 
+using namespace GraphLibrary;
+
 // BFS implementation
 void TraversalAlgorithms::BFS(const AdjacencyMatrixGraph& graph, int startVertex) {
     int numVertices = graph.getNumVertices();
