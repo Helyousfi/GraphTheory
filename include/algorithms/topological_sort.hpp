@@ -13,10 +13,10 @@ namespace GraphLibrary {
 
         private:
             // Utility function for DFS traversal
-            static void DFSUtil(int node, 
-                const AdjacencyMatrixGraph& graph, 
-                std::vector<bool>& visited, 
-                std::vector<int>& visitedNodes)
+            static void DFSUtil(int node,
+                const AdjacencyMatrixGraph& graph,
+                std::vector<bool>& visited,
+                std::vector<int>& visitedNodes);
     };
 };
 #endif // TOPOLOGICAL_SORT_ALGORITHM_
