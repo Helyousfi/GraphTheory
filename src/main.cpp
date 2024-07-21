@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../include/graph/graph.hpp"
 #include "../include/graph/adjacency_matrix_graph.hpp"
-#include "../Utils/debug.hpp"
+#include "../GraphLibrary/Utils/debug.hpp"
 
 int main()
 {

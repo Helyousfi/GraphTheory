@@ -1,7 +1,7 @@
+#include "pch.h"  // Include the precompiled header file
 #include "debug.hpp"
 #include <iostream>
-#include "../include/graph/adjacency_matrix_graph.hpp"
-
+#include "../../include/graph/adjacency_matrix_graph.hpp"
 void debugGraph(const AdjacencyMatrixGraph* graph) {
     if (!graph) {
         std::cout << "Graph is null!" << std::endl;
