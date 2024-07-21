@@ -3,12 +3,14 @@
 
 #include "../../graph/adjacency_matrix_graph.hpp"
 #include <vector>
-using namespace GraphLibrary;
+namespace GraphLibrary
+{
+    class ShortestPathAlgorithms {
+    public:
+        static std::vector<int> bellmanFord(const AdjacencyMatrixGraph& graph, int source);
+        static std::vector<int> dijkstra(const AdjacencyMatrixGraph& graph, int source);
+    };
+}
 
-class ShortestPathAlgorithms {
-public:
-    static std::vector<int> bellmanFord(const AdjacencyMatrixGraph& graph, int source);
-    static std::vector<int> dijkstra(const AdjacencyMatrixGraph& graph, int source);
-};
 
 #endif // SHORTEST_PATH_ALGORITHMS_H

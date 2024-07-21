@@ -1,6 +1,7 @@
 #include <iostream>
 #include "../include/graph/graph.hpp"
 #include "../include/graph/adjacency_matrix_graph.hpp"
+#include "../include/algorithms/traversal/traversal_algorithms.hpp"
 #include "../GraphLibrary/Utils/debug.hpp"
 
 int main()
@@ -18,5 +19,7 @@ int main()
 #ifdef DEBUG
     debugGraph(graph);
 #endif
+    TraversalAlgorithms::BFS(*graph, 0);
+
     return 0;
 }
