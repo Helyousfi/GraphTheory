@@ -1,12 +1,14 @@
 #include <iostream>
+
 #include "../include/graph/graph.hpp"
 #include "../include/graph/adjacency_matrix_graph.hpp"
 #include "../include/algorithms/traversal/traversal_algorithms.hpp"
 #include "../GraphLibrary/Utils/debug.hpp"
 
+
 int main()
 {
-    GraphLibrary::AdjacencyMatrixGraph* graph 
+    GraphLibrary::AdjacencyMatrixGraph* graph
         = new GraphLibrary::AdjacencyMatrixGraph(6, true);
     graph->addEdge(0, 1);
     graph->addEdge(1, 2);

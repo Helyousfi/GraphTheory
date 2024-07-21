@@ -16,7 +16,7 @@ namespace GraphLibrary
      * @param source The starting vertex for the shortest path calculation.
      * @return A vector containing the shortest distance from the source to each vertex.
      */
-    std::vector<int> ShortestPathAlgorithms::bellmanFord(const AdjacencyMatrixGraph& graph, int source) {
+    std::vector<int> ShortestPathAlgorithms::bellmanFord(const Graph& graph, int source) {
         int V = graph.getNumVertices();
         int** adjMatrix = graph.getMatrix();
         std::vector<int> distance(V, INT_MAX);
@@ -54,7 +54,7 @@ namespace GraphLibrary
      * @param graph The graph represented as an AdjacencyMatrixGraph object.
      * @param source The starting vertex for the shortest path calculation.
      */
-    std::vector<int> ShortestPathAlgorithms::dijkstra(const AdjacencyMatrixGraph& graph, int source) {
+    std::vector<int> ShortestPathAlgorithms::dijkstra(const Graph& graph, int source) {
         // Number of vertices in the graph
         int V = graph.getNumVertices();
 
