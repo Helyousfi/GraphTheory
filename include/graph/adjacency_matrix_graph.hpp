@@ -20,6 +20,7 @@
 
 namespace GraphLibrary {
     // Adjacency Matrix representation of a graph
+    // Public Inheritence so that public and protected members retain their visibility
     class AdjacencyMatrixGraph : public Graph {
     private: 
         int **matrix;  // 2D array to store the adjacency matrix

@@ -20,10 +20,12 @@ AdjacencyMatrixGraph::~AdjacencyMatrixGraph()
 {
     // Free memory for each row
     for (int i = 0; i < numVertices; ++i) {
-        delete matrix[i];
+        delete[] matrix[i];
+        matrix[i] = nullptr;
     }
     // Free memory for the array of pointers
     delete[] matrix;
+    matrix = nullptr;
 }
 
 // Function to add an edge from vertex u to vertex v with weight w (for weighted graphs)
