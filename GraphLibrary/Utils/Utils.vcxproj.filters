@@ -24,6 +24,9 @@
     <ClInclude Include="debug.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="graph_plotter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utils.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graph_plotter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
