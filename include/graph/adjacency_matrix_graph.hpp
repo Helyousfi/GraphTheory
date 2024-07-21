@@ -25,10 +25,11 @@ namespace GraphLibrary {
     private: 
         int **matrix;  // 2D array to store the adjacency matrix
         int numVertices;  // Number of vertices in the graph
+        bool directed; // Indicates if the graph is directed
 
     public:
         // Constructor to initialize the graph with n vertices
-        AdjacencyMatrixGraph(int n);
+        AdjacencyMatrixGraph(int n, bool isDirected = false);
 
         // Destructor to free dynamically allocated memory
         ~AdjacencyMatrixGraph();

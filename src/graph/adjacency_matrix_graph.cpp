@@ -4,7 +4,8 @@
 
 using namespace GraphLibrary;
 // Constructor to initialize the graph with n vertices
-AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n) : numVertices(n) {
+AdjacencyMatrixGraph::AdjacencyMatrixGraph(int n, bool isDirected) 
+    : numVertices(n), directed(isDirected){
     // Initialize the adjacency matrix with all zeros (no edges initially)
     matrix = new int*[n]; // Allocates an array of n pointers to int (rows of the matrix).
     for (int i = 0; i < n; ++i) {
@@ -34,7 +35,10 @@ void AdjacencyMatrixGraph::addEdge(int u, int v, int w) {
     if (u >= 0 && u < numVertices && v >= 0 && v < numVertices) {
         matrix[u][v] = w;
         // if the graph is undirected
-        matrix[v][u] = w;
+        if (!directed)
+        {
+            matrix[v][u] = w;
+        }
     } else {
         std::cout << "Error: Invalid vertices " << u << " or " << v << std::endl;
     }
