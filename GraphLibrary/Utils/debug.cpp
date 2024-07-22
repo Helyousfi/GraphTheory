@@ -1,7 +1,7 @@
 #include "pch.h"  // Include the precompiled header file
 #include "debug.hpp"
 #include <iostream>
-#include "../../include/graph/adjacency_matrix_graph.hpp"
+#include "../include/graph/adjacency_matrix_graph.hpp"
 using namespace GraphLibrary;
 
 void debugGraph(const AdjacencyMatrixGraph* graph) {
@@ -28,5 +28,27 @@ void debugGraph(const AdjacencyMatrixGraph* graph) {
                 std::cout << "Edge from " << i << " to " << j << " with weight " << weight << std::endl;
             }
         }
+    }
+}
+
+// Function to debug a 1D vector of ints
+void debugContainer(const std::string& text, const std::vector<int>& vec) {
+    std::cout << text << std::endl;
+    std::cout << "Vector contents: ";
+    for (const int& elem : vec) {
+        std::cout << elem << " ";
+    }
+    std::cout << std::endl;
+}
+
+// Function to debug a 2D array (int**)
+void debugContainer(const std::string& text, int** array, int rows, int cols) {
+    std::cout << text << std::endl;
+    std::cout << "2D array contents:" << std::endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << array[i][j] << " ";
+        }
+        std::cout << std::endl;
     }
 }

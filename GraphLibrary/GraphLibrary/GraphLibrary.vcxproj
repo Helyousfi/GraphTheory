@@ -141,27 +141,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\algorithms\articulation_points.hpp" />
-    <ClInclude Include="..\..\include\algorithms\bipartite_check.hpp" />
-    <ClInclude Include="..\..\include\algorithms\graph_coloring.hpp" />
-    <ClInclude Include="..\..\include\algorithms\shortest_path\shortest_path_algorithms.hpp" />
-    <ClInclude Include="..\..\include\algorithms\strongly_connected_components.hpp" />
-    <ClInclude Include="..\..\include\algorithms\topological_sort.hpp" />
-    <ClInclude Include="..\..\include\algorithms\traversal\traversal_algorithms.hpp" />
-    <ClInclude Include="..\..\include\graph\adjacency_list_graph.hpp" />
-    <ClInclude Include="..\..\include\graph\adjacency_matrix_graph.hpp" />
-    <ClInclude Include="..\..\include\graph\edge_list_graph.hpp" />
-    <ClInclude Include="..\..\include\graph\graph.hpp" />
+    <ClInclude Include="..\include\algorithms\articulation_points.hpp" />
+    <ClInclude Include="..\include\algorithms\bipartite_check.hpp" />
+    <ClInclude Include="..\include\algorithms\graph_coloring.hpp" />
+    <ClInclude Include="..\include\algorithms\shortest_path\shortest_path_algorithms.hpp" />
+    <ClInclude Include="..\include\algorithms\strongly_connected_components.hpp" />
+    <ClInclude Include="..\include\algorithms\topological_sort.hpp" />
+    <ClInclude Include="..\include\algorithms\traversal\traversal_algorithms.hpp" />
+    <ClInclude Include="..\include\graph\adjacency_list_graph.hpp" />
+    <ClInclude Include="..\include\graph\adjacency_matrix_graph.hpp" />
+    <ClInclude Include="..\include\graph\edge_list_graph.hpp" />
+    <ClInclude Include="..\include\graph\graph.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\algorithms\shortest_path\shortest_path_algorithms.cpp" />
-    <ClCompile Include="..\..\src\algorithms\traversal\traversal_algorithms.cpp" />
-    <ClCompile Include="..\..\src\dungeonProblem.cpp" />
-    <ClCompile Include="..\..\src\easyAlgorithms.cpp" />
-    <ClCompile Include="..\..\src\graph\adjacency_matrix_graph.cpp" />
-    <ClCompile Include="..\..\src\main.cpp" />
-    <ClCompile Include="..\..\src\SSSP_DAG.cpp" />
-    <ClCompile Include="..\..\src\topological_sort.cpp" />
+    <ClCompile Include="..\src\algorithms\shortest_path\shortest_path_algorithms.cpp" />
+    <ClCompile Include="..\src\algorithms\traversal\traversal_algorithms.cpp" />
+    <ClCompile Include="..\src\dungeonProblem.cpp" />
+    <ClCompile Include="..\src\easyAlgorithms.cpp" />
+    <ClCompile Include="..\src\graph\adjacency_matrix_graph.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\SSSP_DAG.cpp" />
+    <ClCompile Include="..\src\topological_sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Utils\Utils.vcxproj">

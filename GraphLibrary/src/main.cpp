@@ -3,7 +3,8 @@
 #include "../include/graph/graph.hpp"
 #include "../include/graph/adjacency_matrix_graph.hpp"
 #include "../include/algorithms/traversal/traversal_algorithms.hpp"
-#include "../GraphLibrary/Utils/debug.hpp"
+#include "../include/algorithms/topological_sort.hpp"
+#include "../../GraphLibrary/Utils/debug.hpp"
 
 
 int main()
@@ -22,6 +23,7 @@ int main()
     debugGraph(graph);
 #endif
     TraversalAlgorithms::BFS(*graph, 0);
+    auto topSort = TopologicalSort::topologicalSort(*graph);
 
     return 0;
 }

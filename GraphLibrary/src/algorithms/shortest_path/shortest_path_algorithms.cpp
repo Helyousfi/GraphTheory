@@ -4,6 +4,7 @@
 #include <set>
 #include "../../../include/graph/adjacency_matrix_graph.hpp"
 #include "../../../include/algorithms/shortest_path/shortest_path_algorithms.hpp"
+#include "../../../../GraphLibrary/Utils/debug.hpp"
 
 namespace GraphLibrary
 {
@@ -28,6 +29,10 @@ namespace GraphLibrary
                 for (int v = 0; v < V; ++v) {
                     if (adjMatrix[u][v] != INT_MAX && distance[u] != INT_MAX && distance[u] + adjMatrix[u][v] < distance[v]) {
                         distance[v] = distance[u] + adjMatrix[u][v];
+#ifdef DEBUG
+                        debugContainer("distance[v]", distance);
+#endif // DEBUG
+
                     }
                 }
             }

@@ -9,12 +9,11 @@ namespace GraphLibrary
 {
     /**
      * Performs topological sorting on the given graph and returns the sorted order of vertices.
-     * The graph is represented using an adjacency matrix.
      *
-     * @param graph The graph represented as an AdjacencyMatrixGraph object.
+     * @param graph The graph represented as a Graph object.
      * @return A vector of integers representing the topological order of the vertices.
      */
-    std::vector<int> TopologicalSort::topologicalSort(const AdjacencyMatrixGraph& graph)
+    std::vector<int> TopologicalSort::topologicalSort(const Graph& graph)
     {
         int N = graph.getNumVertices(); // Number of nodes
         std::vector<bool> visited(N, false);    // Initialize visited with false
@@ -24,12 +23,7 @@ namespace GraphLibrary
         {
             if (!visited[node])
             {
-                std::vector<int> visitedNodes;  // Store nodes visited in this DFS traversal
-                DFSUtil(node, graph, visited, visitedNodes);
-                if (!visitedNodes.empty())
-                {
-                    ordering.insert(ordering.end(), visitedNodes.begin(), visitedNodes.end());
-                }
+                DFSUtil(node, graph, visited, ordering);
             }
         }
         std::reverse(ordering.begin(), ordering.end());
@@ -38,19 +32,19 @@ namespace GraphLibrary
 
     // Utility function for DFS
     void TopologicalSort::DFSUtil(int node,
-        const AdjacencyMatrixGraph& graph,
+        const Graph& graph,
         std::vector<bool>& visited,
-        std::vector<int>& visitedNodes)
+        std::vector<int>& ordering)
     {
         visited[node] = true;
-        visitedNodes.push_back(node);
+        ordering.push_back(node);
 
         int** matrix = graph.getMatrix();
         int numVertices = graph.getNumVertices();
 
         for (int i = 0; i < numVertices; ++i) {
             if (matrix[node][i] != 0 && !visited[i]) {
-                DFSUtil(i, graph, visited, visitedNodes);
+                DFSUtil(i, graph, visited, ordering);
             }
         }
     }

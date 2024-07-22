@@ -9,12 +9,12 @@ namespace GraphLibrary {
     class TopologicalSort {
         public:
             // Static method to perform topological sort on the given graph
-            static std::vector<int> topologicalSort(const AdjacencyMatrixGraph& graph);
+            static std::vector<int> topologicalSort(const Graph& graph);
 
         private:
             // Utility function for DFS traversal
             static void DFSUtil(int node,
-                const AdjacencyMatrixGraph& graph,
+                const Graph& graph,
                 std::vector<bool>& visited,
                 std::vector<int>& visitedNodes);
     };
