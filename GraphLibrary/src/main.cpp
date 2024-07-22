@@ -22,6 +22,7 @@ int main()
 #ifdef DEBUG
     debugGraph(graph);
 #endif
+
     TraversalAlgorithms::BFS(*graph, 0);
     auto topSort = TopologicalSort::topologicalSort(*graph);
 
