@@ -39,9 +39,6 @@
     <ClInclude Include="..\include\algorithms\bipartite_check.hpp">
       <Filter>include\algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\algorithms\graph_coloring.hpp">
-      <Filter>include\algorithms</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\algorithms\strongly_connected_components.hpp">
       <Filter>include\algorithms</Filter>
     </ClInclude>
@@ -66,6 +63,7 @@
     <ClInclude Include="..\include\algorithms\traversal\traversal_algorithms.hpp">
       <Filter>include\algorithms\traversal</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\algorithms\graph_coloring.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\dungeonProblem.cpp">
