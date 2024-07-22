@@ -5,7 +5,11 @@
 #include <string>
 #include "graph_plotter.hpp"
 
-void GraphPlotter::visualizeGraphWithPython(const std::vector<std::pair<int, int>>& edges) {
+/// <summary>
+/// Visualize Graph With Python
+/// </summary>
+/// <param name="edges"></param>
+void GraphPlotter::visualizeGraph(const std::vector<std::pair<int, int>>& edges) {
     Py_Initialize();
 
     std::string command = "python "

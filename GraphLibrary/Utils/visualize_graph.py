@@ -7,6 +7,12 @@ def visualize_graph(edges):
     G = nx.DiGraph()
     G.add_edges_from(edges)
     pos = nx.spring_layout(G)
+    
+    # Set the background color to black
+    plt.figure(facecolor='black')
+    ax = plt.gca()
+    ax.set_facecolor('black')
+    
     nx.draw(G, pos, with_labels=True, node_color='skyblue', edge_color='gray', node_size=2000, font_size=15, font_weight='bold')
     plt.show()
 

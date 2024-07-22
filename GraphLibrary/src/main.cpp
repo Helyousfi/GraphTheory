@@ -21,14 +21,8 @@ int main()
 
 #ifdef DEBUG
     debugGraph(graph);
-    std::vector<std::pair<int, int>> edges = {
-        {0, 1}, {1, 2}, {2, 3}, {2, 4}, {1, 4}, {3, 5}, {3, 4}
-    };
-    GraphPlotter::visualizeGraphWithPython(edges);
+    GraphPlotter::visualizeGraph(graph->getEdges());
 #endif
-
-    
-
     TraversalAlgorithms::BFS(*graph, 0);
     auto topSort = TopologicalSort::topologicalSort(*graph);
 

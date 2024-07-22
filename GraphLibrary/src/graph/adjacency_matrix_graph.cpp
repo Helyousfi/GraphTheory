@@ -110,3 +110,16 @@ void AdjacencyMatrixGraph::multiplyByMinusOne() {
         }
     }
 }
+
+// Get all edges in the graph
+std::vector<std::pair<int, int>> AdjacencyMatrixGraph::getEdges() {
+    std::vector<std::pair<int, int>> edges;
+    for (int i = 0; i < numVertices; ++i) {
+        for (int j = 0; j < numVertices; ++j) {
+            if (matrix[i][j] != 0) {
+                edges.emplace_back(i, j);
+            }
+        }
+    }
+    return edges;
+}

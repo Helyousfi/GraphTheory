@@ -14,6 +14,8 @@ namespace GraphLibrary{
             virtual void addEdge(int node1, int node2, int weight = 1) = 0;
             virtual void removeEdge(int node1, int node2) = 0;
 
+            virtual std::vector<std::pair<int, int>> getEdges() = 0;
+            
             virtual bool hasEdge(int node1, int node2) const = 0;
 
             virtual int* getNeighbors(int node) const = 0;

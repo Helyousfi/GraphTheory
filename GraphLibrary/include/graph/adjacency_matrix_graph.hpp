@@ -62,6 +62,8 @@ namespace GraphLibrary {
 
         // Function to multiply the matrix by -1 : useful for SSSP_DAG longest path
         void multiplyByMinusOne();
+
+        std::vector<std::pair<int, int>> getEdges();
     };
 };
 #endif // ADJACENCY_MATRIX_GRAPH_DEFENITION_H

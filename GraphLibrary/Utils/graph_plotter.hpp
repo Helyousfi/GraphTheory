@@ -7,7 +7,7 @@ using namespace GraphLibrary;
 class GraphPlotter {
 public:
     // Function to plot an adjacency matrix graph
-    static void visualizeGraphWithPython(const std::vector<std::pair<int, int>>& edges);
+    static void visualizeGraph(const std::vector<std::pair<int, int>>& edges);
 };
 #else
 #endif
