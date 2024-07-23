@@ -32,7 +32,6 @@ namespace GraphLibrary
 #ifdef DEBUG
                         debugContainer("distance[v]", distance);
 #endif // DEBUG
-
                     }
                 }
             }
