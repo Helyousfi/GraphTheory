@@ -2,6 +2,7 @@
 #include <climits>
 #include <vector>
 #include <set>
+#include <string>
 #include "../../../include/graph/adjacency_matrix_graph.hpp"
 #include "../../../include/algorithms/shortest_path/shortest_path_algorithms.hpp"
 #include "../../../../GraphLibrary/Utils/debug.hpp"
@@ -27,10 +28,16 @@ namespace GraphLibrary
         for (int i = 0; i < V - 1; ++i) {
             for (int u = 0; u < V; ++u) {
                 for (int v = 0; v < V; ++v) {
-                    if (adjMatrix[u][v] != INT_MAX && distance[u] != INT_MAX && distance[u] + adjMatrix[u][v] < distance[v]) {
+                    if (adjMatrix[u][v] != 0 && 
+                        distance[u] != INT_MAX && 
+                        distance[u] + adjMatrix[u][v] < distance[v]) 
+                    {
                         distance[v] = distance[u] + adjMatrix[u][v];
 #ifdef DEBUG
-                        debugContainer("distance[v]", distance);
+                        debugContainer("adjMatrix[" 
+                            + std::to_string(u) + "]"
+                            + "[" + std::to_string(v) + "]", distance);
+                        debugContainer("distance[" + std::to_string(v) + "]", distance);
 #endif // DEBUG
                     }
                 }
@@ -40,8 +47,11 @@ namespace GraphLibrary
         // Check for negative-weight cycles
         for (int u = 0; u < V; ++u) {
             for (int v = 0; v < V; ++v) {
-                if (adjMatrix[u][v] != INT_MAX && distance[u] != INT_MAX && distance[u] + adjMatrix[u][v] < distance[v]) {
-                    std::cout << "Graph contains a negative-weight cycle" << std::endl;
+                if (adjMatrix[u][v] != 0 
+                    && distance[u] != INT_MAX 
+                    && distance[u] + adjMatrix[u][v] < distance[v]) {
+                    std::cout << 
+                        "Graph contains a negative-weight cycle" << std::endl;
                     return std::vector<int>();
                 }
             }
