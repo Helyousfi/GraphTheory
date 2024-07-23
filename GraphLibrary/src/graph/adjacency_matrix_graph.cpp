@@ -44,11 +44,6 @@ void AdjacencyMatrixGraph::addEdge(int u, int v, int w) {
     }
 }
 
-// Function to add an edge from vertex u to vertex v (for unweighted graphs)
-void AdjacencyMatrixGraph::addEdge(int u, int v) {
-    addEdge(u, v, 1); // Default weight is 1 for unweighted graphs
-}
-
 // Function to remove an edge from vertex u to vertex v
 void AdjacencyMatrixGraph::removeEdge(int u, int v) {
     if (u >= 0 && u < numVertices && v >= 0 && v < numVertices) {

@@ -18,6 +18,8 @@
 #include "vector"
 #include "graph.hpp"
 
+#define DEFAULT_WEIGHT 1
+
 namespace GraphLibrary {
     // Adjacency Matrix representation of a graph
     // Public Inheritence so that public and protected members retain their visibility
@@ -35,10 +37,7 @@ namespace GraphLibrary {
         ~AdjacencyMatrixGraph();
 
         // Function to add an edge from vertex u to vertex v with weight w (for weighted graphs)
-        void addEdge(int u, int v, int w);
-
-        // Function to add an edge from vertex u to vertex v (for unweighted graphs)
-        void addEdge(int u, int v);
+        void addEdge(int u, int v, int w = DEFAULT_WEIGHT);
 
         // Function to remove an edge from vertex u to vertex v
         void removeEdge(int u, int v);
