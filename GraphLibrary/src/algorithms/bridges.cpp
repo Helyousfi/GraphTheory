@@ -6,9 +6,10 @@
 
 namespace GraphLibrary
 {
-    BridgesFinder::BridgesFinder(const Graph& graph)
+    BridgesFinder::BridgesFinder(Graph *graph)
     {
-        numVertices = graph.getNumVertices();
+        graph = graph;
+        numVertices = graph->getNumVertices();
         ids = std::vector<int> (numVertices, 0);
         lows = std::vector<int>(numVertices, 0);
         visited = std::vector<bool>(numVertices, false);
@@ -33,7 +34,16 @@ namespace GraphLibrary
         ids[node] = ids[node] + 1;
         lows[node] = ids[node];
 
-
+        for (int neighbor = 0; neighbor < numVertices; ++neighbor) {
+            if (graph->getMatrix()[node][neighbor] != 0) { 
+                if (neighbor == parent)
+                    continue;
+                if(!visited[neighbor])
+                {
+                    DFSUtil(neighbor, node, bridges);
+                }
+            }
+        }
 
 
     }

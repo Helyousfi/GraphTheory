@@ -9,11 +9,12 @@
 namespace GraphLibrary {
     class BridgesFinder {
     public:
-        BridgesFinder(const Graph& graph);
+        BridgesFinder(Graph *graph);
         // Static method to find edges on the given graph
         std::vector<int> findBridges();
 
     private:
+        Graph graph;
         int numVertices;
         std::vector<int> ids; 
         std::vector<int> lows; 
