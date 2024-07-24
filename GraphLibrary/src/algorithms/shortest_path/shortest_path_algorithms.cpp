@@ -114,8 +114,24 @@ namespace GraphLibrary
         return distance;
     }
 
-    std::vector<int> ShortestPathAlgorithms::floydWarshal(const Graph& graph, int source)
+    std::vector<int> ShortestPathAlgorithms::floydWarshal(const Graph& graph, 
+        int source)
     {
+        // Number of vertices in the graph
+        int V = graph.getNumVertices();
+        // Get the adjacency matrix of the graph
+        int** adjMatrix = graph.getMatrix();
 
+        // Initialise & fill the dist matrix
+        int** dist;
+        for (int i = 0; i < V; i++)
+        {
+            for (int j = 0; j < V; j++)
+            {
+                if (i == j) dist[i][j] = 0;
+                else if (adjMatrix[i][j] != 0) dist[i][j] = adjMatrix[i][j];
+                else dist[i][j] = INT_MAX;
+            }
+        }
     }
 }
