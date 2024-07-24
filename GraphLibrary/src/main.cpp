@@ -22,7 +22,7 @@ int main()
 
 #ifdef DEBUG
     debugGraph(graph);
-    GraphPlotter::visualizeGraph(graph->getEdges());
+    // GraphPlotter::visualizeGraph(graph->getEdges());
 #endif
     TraversalAlgorithms::BFS(*graph, 0);
     auto topSort = TopologicalSort::topologicalSort(*graph);

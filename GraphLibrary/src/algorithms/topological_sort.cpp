@@ -2,8 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include "../include/algorithms/topological_sort.hpp"
-#include "../include/graph/adjacency_matrix_graph.hpp"
+#include "../../include/algorithms/topological_sort.hpp"
+#include "../../include/graph/adjacency_matrix_graph.hpp"
 
 namespace GraphLibrary
 {
