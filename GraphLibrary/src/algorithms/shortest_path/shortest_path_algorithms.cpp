@@ -114,37 +114,41 @@ namespace GraphLibrary
         return distance;
     }
 
-    std::vector<int, int> ShortestPathAlgorithms::floydWarshal(const Graph& graph, 
-        int source)
-    {
+    std::vector<std::vector<int>> ShortestPathAlgorithms::floydWarshal(
+        const Graph& graph) {
         // Number of vertices in the graph
         int V = graph.getNumVertices();
         // Get the adjacency matrix of the graph
         int** adjMatrix = graph.getMatrix();
 
-        // Initialise & fill the dist matrix
-        std::vector<int, int>  dist;
-        for (int i = 0; i < V; i++)
-        {
-            for (int j = 0; j < V; j++)
-            {
-                if (i == j) dist[i, j] = 0;
-                else if (adjMatrix[i][j] != 0) dist[i, j] = adjMatrix[i][j];
-                else dist[i, j] = INT_MAX;
-            }
-        }
+        // Initialize & fill the dist matrix
+        std::vector<std::vector<int>> dist(V, std::vector<int>(V));
 
-        for (int k = 0; k < V; k++)
-        {
-            for (int i = 0; i < V; i++)
-            {
-                for (int j = 0; j < V; j++)
-                {
-                    if (dist[i, j] > dist[i, k] + dist[k, j])
-                        dist[i, j] = dist[i, k] + dist[k, j];
+        for (int i = 0; i < V; ++i) {
+            for (int j = 0; j < V; ++j) {
+                if (i == j) {
+                    dist[i][j] = 0;
+                }
+                else if (adjMatrix[i][j] != 0) {
+                    dist[i][j] = adjMatrix[i][j];
+                }
+                else {
+                    dist[i][j] = INT_MAX;
                 }
             }
         }
+
+        // The core of the Floyd-Warshall algorithm
+        for (int k = 0; k < V; ++k) {
+            for (int i = 0; i < V; ++i) {
+                for (int j = 0; j < V; ++j) {
+                    if (dist[i][k] != INT_MAX && dist[k][j] != INT_MAX && dist[i][j] > dist[i][k] + dist[k][j]) {
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                    }
+                }
+            }
+        }
+
         return dist;
     }
 }
