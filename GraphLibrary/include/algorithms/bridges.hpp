@@ -7,17 +7,24 @@
 #include "../graph/graph.hpp"
 
 namespace GraphLibrary {
-    class EdgesFinder {
+    class BridgesFinder {
     public:
+        BridgesFinder(const Graph& graph);
         // Static method to find edges on the given graph
-        static std::vector<int> findBridges(const Graph& graph);
+        std::vector<int> findBridges();
 
     private:
+        int numVertices;
+        std::vector<int> ids; 
+        std::vector<int> lows; 
+        std::vector<bool> visited; 
+
+        std::vector<int> bridges;
+
         // Utility function for DFS traversal
-        static void DFSUtil(int node,
-            const Graph& graph,
-            std::vector<bool>& visited,
-            std::vector<int>& visitedNodes);
+        void DFSUtil(int node,
+            int parent,
+            std::vector<int> bridges);
     };
 };
 #endif // BRIDGES_FINDER_ALGORITHM_
