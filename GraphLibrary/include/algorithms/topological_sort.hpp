@@ -1,3 +1,4 @@
+#pragma once
 #ifndef TOPOLOGICAL_SORT_ALGORITHM_
 #define TOPOLOGICAL_SORT_ALGORITHM_
 

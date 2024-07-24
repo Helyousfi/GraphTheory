@@ -64,7 +64,7 @@
       <Filter>include\algorithms\traversal</Filter>
     </ClInclude>
     <ClInclude Include="..\include\algorithms\graph_coloring.hpp" />
-    <ClInclude Include="..\include\algorithms\edges.hpp">
+    <ClInclude Include="..\include\algorithms\bridges.hpp">
       <Filter>include\algorithms</Filter>
     </ClInclude>
   </ItemGroup>
@@ -90,7 +90,7 @@
     <ClCompile Include="..\src\algorithms\traversal\traversal_algorithms.cpp">
       <Filter>src\algorithms\traversal</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\algorithms\edges.cpp">
+    <ClCompile Include="..\src\algorithms\bridges.cpp">
       <Filter>src\algorithms</Filter>
     </ClCompile>
     <ClCompile Include="..\src\algorithms\topological_sort.cpp">

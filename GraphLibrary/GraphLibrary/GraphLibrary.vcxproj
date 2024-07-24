@@ -143,7 +143,7 @@
   <ItemGroup>
     <ClInclude Include="..\include\algorithms\articulation_points.hpp" />
     <ClInclude Include="..\include\algorithms\bipartite_check.hpp" />
-    <ClInclude Include="..\include\algorithms\edges.hpp" />
+    <ClInclude Include="..\include\algorithms\bridges.hpp" />
     <ClInclude Include="..\include\algorithms\graph_coloring.hpp" />
     <ClInclude Include="..\include\algorithms\shortest_path\shortest_path_algorithms.hpp" />
     <ClInclude Include="..\include\algorithms\strongly_connected_components.hpp" />
@@ -155,7 +155,7 @@
     <ClInclude Include="..\include\graph\graph.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\algorithms\edges.cpp" />
+    <ClCompile Include="..\src\algorithms\bridges.cpp" />
     <ClCompile Include="..\src\algorithms\shortest_path\shortest_path_algorithms.cpp" />
     <ClCompile Include="..\src\algorithms\topological_sort.cpp" />
     <ClCompile Include="..\src\algorithms\traversal\traversal_algorithms.cpp" />
