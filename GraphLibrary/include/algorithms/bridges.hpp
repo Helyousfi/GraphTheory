@@ -11,21 +11,20 @@ namespace GraphLibrary {
     public:
         BridgesFinder(Graph *graph);
         // Static method to find edges on the given graph
-        std::vector<int> findBridges();
+        std::vector<std::pair<int, int>> findBridges();
 
     private:
-        Graph graph;
+        Graph* graph;
         int numVertices;
         std::vector<int> ids; 
         std::vector<int> lows; 
         std::vector<bool> visited; 
-
-        std::vector<int> bridges;
+        int idCounter; // Counter to track the discovery times
 
         // Utility function for DFS traversal
         void DFSUtil(int node,
             int parent,
-            std::vector<int> bridges);
+            std::vector<std::pair<int, int>> bridges);
     };
 };
 #endif // BRIDGES_FINDER_ALGORITHM_
