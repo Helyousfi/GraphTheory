@@ -9,7 +9,7 @@ namespace GraphLibrary
     public:
         static std::vector<int> bellmanFord(const Graph& graph, int source);
         static std::vector<int> dijkstra(const Graph& graph, int source);
-        static std::vector<int> floydWarshal(const Graph& graph, int source);
+        static std::vector<std::vector<int>> floydWarshal(const Graph& graph, int source);
     };
 }
 
