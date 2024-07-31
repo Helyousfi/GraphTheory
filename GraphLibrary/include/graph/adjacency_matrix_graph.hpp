@@ -20,6 +20,13 @@
 
 #define DEFAULT_WEIGHT 1
 
+// Define DLL export/import macro
+#ifdef GRAPH_LIBRARY_EXPORTS
+#define GRAPH_LIBRARY_API __declspec(dllexport)
+#else
+#define GRAPH_LIBRARY_API __declspec(dllimport)
+#endif
+
 namespace GraphLibrary {
     // Adjacency Matrix representation of a graph
     // Public Inheritence so that public and protected members retain their visibility
