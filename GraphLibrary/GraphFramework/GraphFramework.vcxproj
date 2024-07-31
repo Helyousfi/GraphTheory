@@ -139,33 +139,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\algorithms\mst\kruskal.hpp" />
-    <ClInclude Include="..\include\algorithms\mst\prim.hpp" />
-    <ClInclude Include="..\include\algorithms\shortest_path\shortest_path_algorithms.hpp" />
-    <ClInclude Include="..\include\algorithms\traversal\traversal_algorithms.hpp" />
-    <ClInclude Include="..\include\graph\adjacency_list_graph.hpp" />
-    <ClInclude Include="..\include\graph\adjacency_matrix_graph.hpp" />
-    <ClInclude Include="..\include\graph\edge_list_graph.hpp" />
-    <ClInclude Include="..\include\graph\graph.hpp" />
-    <ClInclude Include="..\include\tree.hpp" />
+    <ClInclude Include="adjacency_list_graph.hpp" />
+    <ClInclude Include="adjacency_matrix_graph.hpp" />
+    <ClInclude Include="articulation_points.hpp" />
+    <ClInclude Include="bipartite_check.hpp" />
+    <ClInclude Include="bridges.hpp" />
+    <ClInclude Include="edge_list_graph.hpp" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="graph.hpp" />
+    <ClInclude Include="graph_coloring.hpp" />
+    <ClInclude Include="kruskal.hpp" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="prim.hpp" />
+    <ClInclude Include="shortest_path_algorithms.hpp" />
+    <ClInclude Include="strongly_connected_components.hpp" />
+    <ClInclude Include="topological_sort.hpp" />
+    <ClInclude Include="traversal_algorithms.hpp" />
+    <ClInclude Include="tree.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\algorithms\bridges.cpp" />
-    <ClCompile Include="..\src\algorithms\shortest_path\shortest_path_algorithms.cpp" />
-    <ClCompile Include="..\src\algorithms\topological_sort.cpp" />
-    <ClCompile Include="..\src\algorithms\traversal\traversal_algorithms.cpp" />
-    <ClCompile Include="..\src\dungeonProblem.cpp" />
-    <ClCompile Include="..\src\easyAlgorithms.cpp" />
-    <ClCompile Include="..\src\SSSP_DAG.cpp" />
+    <ClCompile Include="adjacency_matrix_graph.cpp" />
+    <ClCompile Include="bridges.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="dungeonProblem.cpp" />
+    <ClCompile Include="easyAlgorithms.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="shortest_path_algorithms.cpp" />
+    <ClCompile Include="SSSP_DAG.cpp" />
+    <ClCompile Include="topological_sort.cpp" />
+    <ClCompile Include="traversal_algorithms.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

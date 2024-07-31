@@ -24,7 +24,7 @@ namespace GraphLibrary {
         // Utility function for DFS traversal
         void DFSUtil(int node,
             int parent,
-            std::vector<std::pair<int, int>> bridges);
+            std::vector<std::pair<int, int>>& bridges);
     };
 };
 #endif // BRIDGES_FINDER_ALGORITHM_

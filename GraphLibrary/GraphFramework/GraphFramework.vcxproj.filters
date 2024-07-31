@@ -21,31 +21,49 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\algorithms\shortest_path\shortest_path_algorithms.hpp">
+    <ClInclude Include="adjacency_list_graph.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\algorithms\mst\kruskal.hpp">
+    <ClInclude Include="adjacency_matrix_graph.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\algorithms\mst\prim.hpp">
+    <ClInclude Include="articulation_points.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\algorithms\traversal\traversal_algorithms.hpp">
+    <ClInclude Include="bipartite_check.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\graph\adjacency_list_graph.hpp">
+    <ClInclude Include="bridges.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\graph\adjacency_matrix_graph.hpp">
+    <ClInclude Include="edge_list_graph.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\graph\edge_list_graph.hpp">
+    <ClInclude Include="graph.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\graph\graph.hpp">
+    <ClInclude Include="graph_coloring.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\tree.hpp">
+    <ClInclude Include="kruskal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prim.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shortest_path_algorithms.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strongly_connected_components.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="topological_sort.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="traversal_algorithms.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,25 +74,28 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\dungeonProblem.cpp">
+    <ClCompile Include="adjacency_matrix_graph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\easyAlgorithms.cpp">
+    <ClCompile Include="bridges.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\SSSP_DAG.cpp">
+    <ClCompile Include="dungeonProblem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\algorithms\shortest_path\shortest_path_algorithms.cpp">
+    <ClCompile Include="easyAlgorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\algorithms\traversal\traversal_algorithms.cpp">
+    <ClCompile Include="shortest_path_algorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\algorithms\bridges.cpp">
+    <ClCompile Include="SSSP_DAG.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\algorithms\topological_sort.cpp">
+    <ClCompile Include="topological_sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="traversal_algorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

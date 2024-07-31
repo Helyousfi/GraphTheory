@@ -1,6 +1,6 @@
 #include "pch.h"
-#include "../../include/graph/graph.hpp"
-#include "../../include/algorithms/bridges.hpp"
+#include "graph.hpp"
+#include "bridges.hpp"
 #include <iostream>
 #include <queue>
 #include <stack>
@@ -28,7 +28,7 @@ namespace GraphLibrary
     }
     void BridgesFinder::DFSUtil(int node,
         int parent,
-        std::vector<std::pair<int, int>> bridges)
+        std::vector<std::pair<int, int>>& bridges)
     {
         visited[node] = true;
         ids[node] = lows[node] = ++idCounter;
