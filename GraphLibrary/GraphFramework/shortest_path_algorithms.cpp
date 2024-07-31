@@ -1,3 +1,4 @@
+#include "pch.h"
 #include <iostream>
 #include <climits>
 #include <vector>
@@ -5,7 +6,7 @@
 #include <string>
 #include "adjacency_matrix_graph.hpp"
 #include "shortest_path_algorithms.hpp"
-#include "debug.hpp"
+// #include "debug.hpp"
 
 namespace GraphLibrary
 {

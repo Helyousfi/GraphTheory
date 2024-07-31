@@ -6,6 +6,13 @@
 #include <algorithm>
 #include "graph.hpp"
 
+// Define DLL export/import macro
+#ifdef GRAPH_LIBRARY_EXPORTS
+#define GRAPH_LIBRARY_API __declspec(dllexport)
+#else
+#define GRAPH_LIBRARY_API __declspec(dllimport)
+#endif
+
 namespace GraphLibrary {
     class BridgesFinder {
     public:

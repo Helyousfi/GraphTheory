@@ -40,13 +40,13 @@ namespace GraphLibrary
                 if(!visited[neighbor])
                 {
                     DFSUtil(neighbor, node, bridges);
-                    lows[node] = std::min(lows[node], lows[neighbor]);
+                    // lows[node] = std::min(lows[node], lows[neighbor]);
                     if (ids[node] < ids[neighbor])
                     {
                         bridges.push_back({ node, neighbor });
                     }
-                    else
-                        lows[neighbor] = std::min(lows[node], lows[neighbor]);
+                    // else
+                        // lows[neighbor] = std::min(lows[node], lows[neighbor]);
                 }
             }
         }
