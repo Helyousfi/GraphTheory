@@ -1,7 +1,7 @@
 #ifndef SHORTEST_PATH_ALGORITHMS_H
 #define SHORTEST_PATH_ALGORITHMS_H
 
-#include "../../graph/graph.hpp"
+#include "graph.hpp"
 #include <vector>
 
 // Define DLL export/import macro
