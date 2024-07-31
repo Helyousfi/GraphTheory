@@ -1,12 +1,6 @@
 #include <iostream>
-
-#include "../include/graph/graph.hpp"
-#include "../include/graph/adjacency_matrix_graph.hpp"
-#include "../include/algorithms/traversal/traversal_algorithms.hpp"
-#include "../include/algorithms/shortest_path/shortest_path_algorithms.hpp"
-#include "../include/algorithms/topological_sort.hpp"
-#include "../../GraphLibrary/Utils/debug.hpp"
-#include "../../GraphLibrary/Utils/graph_plotter.hpp"
+#include "../GraphFramework/graph.hpp"
+#include "../GraphFramework/adjacency_matrix_graph.hpp"
 
 int main()
 {
@@ -20,15 +14,15 @@ int main()
     graph->addEdge(3, 5);
     graph->addEdge(3, 4);
 
-#ifdef DEBUG
+#ifndef DEBUG
     debugGraph(graph);
     // GraphPlotter::visualizeGraph(graph->getEdges());
-#endif
+
     TraversalAlgorithms::BFS(*graph, 0);
     auto topSort = TopologicalSort::topologicalSort(*graph);
 
     std::vector<int> belmanFord = ShortestPathAlgorithms::bellmanFord(*graph, 0);
-#ifdef DEBUG
+
     debugContainer("belmanFord : ", belmanFord);
 #endif // DEBUG
 
