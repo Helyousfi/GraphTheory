@@ -23,7 +23,7 @@
 #endif
 
 namespace GraphLibrary{
-    class Graph {
+    class GRAPH_LIBRARY_API Graph {
         public: 
             virtual ~Graph() {}
 
