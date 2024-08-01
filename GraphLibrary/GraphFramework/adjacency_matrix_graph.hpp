@@ -15,10 +15,17 @@
 #ifndef ADJACENCY_MATRIX_GRAPH_DEFENITION_H
 #define ADJACENCY_MATRIX_GRAPH_DEFENITION_H
 
-#include "vector"
+#include <vector>
 #include "graph.hpp"
 
 #define DEFAULT_WEIGHT 1
+
+// Debug macro
+#ifdef _DEBUG
+#define DEBUG_LOG(msg) std::cout << "DEBUG: " << msg << std::endl;
+#else
+#define DEBUG_LOG(msg)
+#endif
 
 // Define DLL export/import macro
 #ifdef GRAPH_LIBRARY_EXPORTS
