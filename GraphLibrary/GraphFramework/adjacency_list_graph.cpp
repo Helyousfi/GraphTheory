@@ -6,12 +6,25 @@ using namespace GraphLibrary;
 // Constructor to initialize the graph with n vertices
 AdjacencyListGraph::AdjacencyListGraph(int n, bool isDirected)
     : numVertices(n), directed(isDirected) {
-
+    // Initialize the adjacency matrix with all zeros (no edges initially)
+    adjList = new Node* [n]; // Allocates an array of n pointers to int (rows of the matrix).
+    for (int i = 0; i < n; ++i) {
+        adjList[i] = new Node[n];
+        // Initialize all elements to zero
+        // ...
+    }
 }
 
 AdjacencyListGraph::~AdjacencyListGraph()
 {
-
+    // Free memory for each row
+    for (int i = 0; i < numVertices; ++i) {
+        delete[] adjList[i];
+        adjList[i] = nullptr;
+    }
+    // Free memory for the array of pointers
+    delete[] adjList;
+    adjList = nullptr;
 }
 
 // Function to add an edge from vertex u to vertex v with weight w (for weighted graphs)
