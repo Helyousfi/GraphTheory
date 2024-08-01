@@ -32,9 +32,9 @@ namespace GraphLibrary {
     // Public Inheritence so that public and protected members retain their visibility
     class GRAPH_LIBRARY_API AdjacencyMatrixGraph : public Graph {
     private: 
-        int **matrix;  // 2D array to store the adjacency matrix
-        int numVertices;  // Number of vertices in the graph
-        bool directed; // Indicates if the graph is directed
+        int **matrix;       // 2D array to store the adjacency matrix
+        int numVertices;    // Number of vertices in the graph
+        bool directed;      // Indicates if the graph is directed
 
     public:
         // Constructor to initialize the graph with n vertices
@@ -58,6 +58,7 @@ namespace GraphLibrary {
         // Getter for the number of vertices
         int getNumVertices() const;
 
+        // Getter for the edge weight
         int getEdgeWeight(int node1, int node2) const;
 
         // Getter for the adjacency matrix
@@ -69,7 +70,8 @@ namespace GraphLibrary {
         // Function to multiply the matrix by -1 : useful for SSSP_DAG longest path
         void multiplyByMinusOne();
 
-        std::vector<std::pair<int, int>> getEdges();
+        // Get All Edges
+        std::vector<std::pair<int, int>> getEdges() const;
     };
 };
 #endif // ADJACENCY_MATRIX_GRAPH_DEFENITION_H
