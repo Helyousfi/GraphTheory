@@ -9,9 +9,9 @@ This repository includes the following graph algorithms:
 - Depth-First Search (DFS)
 - Breadth-First Search (BFS)
 2. Shortest Path Algorithms
-Dijkstra's Algorithm
-Bellman-Ford Algorithm
-Floyd-Warshall Algorithm
+- Dijkstra's Algorithm
+- Bellman-Ford Algorithm
+- Floyd-Warshall Algorithm
 3. Minimum Spanning Tree
 Kruskal's Algorithm
 Prim's Algorithm
