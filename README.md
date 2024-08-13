@@ -13,11 +13,11 @@ This repository includes the following graph algorithms:
 - Bellman-Ford Algorithm
 - Floyd-Warshall Algorithm
 3. Minimum Spanning Tree
-Kruskal's Algorithm
-Prim's Algorithm
+- Kruskal's Algorithm
+- Prim's Algorithm
 4. Network Flow Algorithms
-Ford-Fulkerson Method
-Edmonds-Karp Algorithm
+- Ford-Fulkerson Method
+- Edmonds-Karp Algorithm
 5. Graph Coloring
 Greedy Coloring Algorithm
 6. Topological Sorting
