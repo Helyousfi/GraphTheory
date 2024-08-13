@@ -6,8 +6,8 @@ Designed for both educational (and practical applications), the library includes
 This repository includes the following graph algorithms:
 
 1. Graph Traversal
-Depth-First Search (DFS)
-Breadth-First Search (BFS)
+- Depth-First Search (DFS)
+- Breadth-First Search (BFS)
 2. Shortest Path Algorithms
 Dijkstra's Algorithm
 Bellman-Ford Algorithm
